@@ -293,6 +293,7 @@ $("acts").style.visibility="hidden";
 $("hint").textContent="Нажми на карточку, чтобы перевернуть";
 tone(300,.06);
 }
+   
 function take(kind){
 if(cur||busy)return;
 var arr=kind==="d"?deck:(kind==="k"?known:again);
@@ -302,6 +303,7 @@ var w=arr.pop();
 present(w,src);
 render();
 }
+   
 function flip(){
 if(!cur||busy)return;
 flipped=!flipped;
@@ -310,6 +312,7 @@ tone(520,.07);
 if(flipped){$("acts").style.visibility="visible";$("hint").textContent="Положи карточку в одну из стопок"}
 else setHist(false);
 }
+   
 function put(kind){
 if(!cur||busy||!flipped)return;
 busy=true;
